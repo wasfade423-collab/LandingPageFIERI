@@ -38,12 +38,13 @@ window.addEventListener('scroll', () => {
     const heroHeight = heroSection.offsetHeight;
 
     if (window.scrollY > heroHeight) {
-        // Si on a dépassé le Hero : on affiche le bouton
+        // Si on a dépassé le Hero je affiche le bouton
         stickyCta.classList.remove('opacity-0', 'translate-y-10', 'pointer-events-none');
         stickyCta.classList.add('opacity-100', 'translate-y-0', 'pointer-events-auto');
     } else {
-        // Si on est dans le Hero : on cache le bouton
+        // Si on est dans le Hero je cache le bouton
         stickyCta.classList.add('opacity-0', 'translate-y-10', 'pointer-events-none');
         stickyCta.classList.remove('opacity-100', 'translate-y-0', 'pointer-events-auto');
     }
+
 });
