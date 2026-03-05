@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AFERI - Innovation & Recherche</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .carousel-item { display: none; }
+        .carousel-item.active { display: block; }
+        /* Style pour le menu mobile */
+        #mobile-menu {
+            transition: transform 0.3s ease-in-out;
+            transform: translateX(100%);
+        }
+        #mobile-menu.open {
+            transform: translateX(0);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-gray-900 font-sans">
+
+    <nav class="fixed w-full z-50 bg-white shadow-md">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <h1 class="text-2xl font-black text-blue-700">AFERI</h1>
+            
+            <ul class="hidden md:flex space-x-8 font-semibold text-gray-600">
+                <li><a href="index.html" class="hover:text-blue-600 transition">Accueil</a></li>
+                <li><a href="#mission" class="hover:text-blue-600 transition">Mission</a></li>
+                <li><a href="#clubs" class="hover:text-blue-600 transition">Clubs</a></li>
+                <li><a href="#evenement" class="hover:text-blue-600 transition">Évènement</a></li>
+            </ul>
+
+            <div class="flex items-center gap-4">
+                <a href="VOTRE_LIEN_GOOGLE_FORMS" target="_blank" class="hidden sm:block bg-blue-600 text-white px-5 py-2 rounded-lg font-bold hover:bg-blue-700 transition">S'inscrire</a>
+                
+                <button id="burger-btn" class="md:hidden text-2xl text-blue-700 focus:outline-none">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="fixed top-0 right-0 h-full w-64 bg-white shadow-2xl z-[60] p-6 md:hidden">
+            <button id="close-menu" class="text-2xl mb-8 text-gray-500"><i class="fas fa-times"></i></button>
+            <ul class="flex flex-col space-y-6 text-lg font-bold text-gray-700">
+                <li><a href="index.html" class="mobile-link">Accueil</a></li>
+                <li><a href="#mission" class="mobile-link">Mission</a></li>
+                <li><a href="#clubs" class="mobile-link">Clubs</a></li>
+                <li><a href="#evenement" class="mobile-link">Évènement</a></li>
+                <li><a href="VOTRE_LIEN_GOOGLE_FORMS" class="text-blue-600">S'inscrire</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="pt-32 pb-20 bg-blue-50">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <h2 class="text-5xl md:text-7xl font-extrabold text-slate-900 mb-6 leading-tight">L'avenir de l'ingénierie commence <span class="text-blue-600 font-mono italic text-4xl md:text-6xl">ici.</span></h2>
+            <p class="text-xl text-gray-600 max-w-2xl mx-auto mb-10">Rejoignez le pôle d'excellence en Électronique d'AFERI et transformez vos théories en prototypes concrets.</p>
+            <a href="VOTRE_LIEN_GOOGLE_FORMS" class="inline-block bg-blue-600 text-white px-10 py-4 rounded-2xl font-black text-xl hover:bg-blue-700 hover:-translate-y-1 transition transform shadow-xl">
+                POSTULER AU CLUB ÉLECTRONIQUE
+            </a>
+        </div>
+    </header>
+
+    <section id="mission" class="py-24 bg-white">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h3 class="text-3xl font-bold mb-8">Notre Mission</h3>
+            <div class="p-8 bg-slate-50 rounded-3xl border border-slate-100">
+                <p class="text-xl leading-relaxed text-gray-700 italic">
+                    "AFERI a pour mission de catalyser le génie créatif étudiant par la recherche appliquée. Nous ne nous contentons pas d'apprendre ; nous innovons pour résoudre les défis technologiques de demain à travers une collaboration interdisciplinaire entre l'électronique, la mécanique et l'informatique."
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="clubs" class="py-24 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-6">
+            <h3 class="text-3xl font-bold mb-16 text-center">Nos Divisions de Recherche</h3>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-blue-600 p-8 rounded-3xl text-white shadow-xl">
+                    <i class="fas fa-bolt text-3xl mb-4 text-yellow-300"></i>
+                    <h4 class="text-xl font-bold mb-3">Club Électronique</h4>
+                    <p class="text-sm opacity-90">Expertise en circuits, microcontrôleurs et IoT industriel.</p>
+                </div>
+                <div class="bg-white p-8 rounded-3xl shadow-sm border border-slate-200">
+                    <i class="fas fa-robot text-3xl mb-4 text-blue-600"></i>
+                    <h4 class="text-xl font-bold mb-3">Club Robotique</h4>
+                    <p class="text-sm text-gray-500">Conception de systèmes autonomes et mécatronique.</p>
+                </div>
+                <div class="bg-white p-8 rounded-3xl shadow-sm border border-slate-200">
+                    <i class="fas fa-code text-3xl mb-4 text-blue-600"></i>
+                    <h4 class="text-xl font-bold mb-3">Club Informatique</h4>
+                    <p class="text-sm text-gray-500">Développement Web, IA et Cybersécurité.</p>
+                </div>
+                <div class="bg-white p-8 rounded-3xl shadow-sm border border-slate-200">
+                    <i class="fas fa-tools text-3xl mb-4 text-blue-600"></i>
+                    <h4 class="text-xl font-bold mb-3">Club Mécanique</h4>
+                    <p class="text-sm text-gray-600">Ingénierie des structures et modélisation CAO.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="evenement" class="py-24 bg-white">
+        <div class="max-w-5xl mx-auto px-6">
+            <h3 class="text-3xl font-bold text-center mb-12">Dernière Innovation Robotique</h3>
+            
+            <div class="relative rounded-3xl overflow-hidden shadow-2xl aspect-video">
+                <div class="carousel-item active h-full">
+                    <img src="https://images.unsplash.com/photo-1531746790731-6c087fecd05a?auto=format&fit=crop&w=1200" class="w-full h-full object-cover" alt="Projet 1">
+                </div>
+                <div class="carousel-item h-full">
+                    <img src="https://images.unsplash.com/photo-1555255707-c07966088b7b?auto=format&fit=crop&w=1200" class="w-full h-full object-cover" alt="Projet 2">
+                </div>
+                <div class="carousel-item h-full">
+                    <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=1200" class="w-full h-full object-cover" alt="Projet 3">
+                </div>
+            </div>
+        </div>
+    </section>
+
+<footer class="bg-slate-900 text-white py-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-10">
+                
+                <div class="text-center md:text-left">
+                    <span class="text-2xl font-black text-blue-400">AFERI</span>
+                    <p class="text-gray-500 text-xs mt-2 uppercase tracking-widest">Recherche & Innovation</p>
+                </div>
+
+                <nav>
+                    <ul class="flex flex-wrap justify-center gap-6 md:gap-10 text-sm font-medium text-gray-400">
+                        <li><a href="index.html" class="hover:text-white transition">Accueil</a></li>
+                        <li><a href="#mission" class="hover:text-white transition">Mission</a></li>
+                        <li><a href="#clubs" class="hover:text-white transition">Clubs</a></li>
+                        <li><a href="#evenement" class="hover:text-white transition">Évènement</a></li>
+                    </ul>
+                </nav>
+                
+                <div class="flex space-x-6">
+                    <a href="#" class="group flex items-center justify-center w-10 h-10 rounded-full bg-slate-800 hover:bg-blue-600 transition shadow-lg">
+                        <i class="fab fa-facebook-f text-lg"></i>
+                    </a>
+                    <a href="#" class="group flex items-center justify-center w-10 h-10 rounded-full bg-slate-800 hover:bg-green-500 transition shadow-lg">
+                        <i class="fab fa-whatsapp text-lg"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="mt-12 pt-8 border-t border-slate-800 text-center text-gray-600 text-[10px] uppercase tracking-[0.2em]">
+                © 2026 AFERI - Tous droits réservés
+            </div>
+        </div>
+    </footer>
+<div id="sticky-cta" class="fixed bottom-8 right-8 z-[100] transition-all duration-500 opacity-0 translate-y-10 pointer-events-none">
+    <a href="VOTRE_LIEN_GOOGLE_FORMS" target="_blank" class="flex items-center gap-3 bg-blue-600 text-white px-6 py-4 rounded-full font-bold shadow-[0_10px_25px_rgba(37,99,235,0.4)] hover:bg-blue-700 hover:scale-105 transition-all">
+        <i class="fas fa-edit"></i>
+        <span>S'inscrire maintenant</span>
+    </a>
+</div>
+    <script src="script.js"></script>
+</body>
+</html>
